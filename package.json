@@ -1,0 +1,25 @@
+{
+    "name": "@h4v0c/rng",
+    "version": "1.0.0",
+    "description": "`rng` is a random number generator based on https://github.com/bryc/code/blob/master/jshash/PRNGs.md#mulberry32",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/h4v0c-npm/rng.git"
+    },
+    "keywords": [],
+    "author": "John Wakley <john.wakley@icloud.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/h4v0c-npm/rng/issues"
+    },
+    "homepage": "https://github.com/h4v0c-npm/rng#readme",
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
