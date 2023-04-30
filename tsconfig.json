@@ -1,20 +1,16 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "preserveConstEnums": true,
-        "lib": [
-            "dom",
-            "es6"
-        ],
-        "rootDir": "src",
+        "declaration": true,
+        "module": "commonjs",
+        "moduleResolution": "node16",
         "outDir": "dist",
-        "declaration": true
+        "preserveConstEnums": true,
+        "rootDir": "src",
+        "sourceMap": true,
+        "target": "es2015"
     },
     "include": [
-        "./src/**/*.ts*"
+        "src"
     ],
     "exclude": [
         "node_modules"
