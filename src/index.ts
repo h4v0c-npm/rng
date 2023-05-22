@@ -101,6 +101,6 @@ export const seed: (n?: number) => number = _instance.seed.bind(_instance);
 export const randomFloat: () => number = _instance.randomFloat.bind(_instance);
 export const randomInt: () => number = _instance.randomInt.bind(_instance);
 export const randomRange: (min: number, max?: number) => number = _instance.randomRange.bind(_instance);
-export const choose: (value: Array<any> | string) => any = _instance.choose.bind(_instance);
+export const choose: (value: Array<any> | string, weights?: number[]) => any = _instance.choose.bind(_instance);
 export const shuffle: (value: Array<any> | string) => Array<any> | string = _instance.shuffle.bind(_instance);
 export const randomPointInCircle: (radius: number, round: boolean) => { x: number, y: number } = _instance.randomPointInCircle.bind(_instance);
