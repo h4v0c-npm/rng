@@ -1,6 +1,6 @@
 {
     "name": "@h4v0c/rng",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A random number generator based on https://github.com/bryc/code/blob/master/jshash/PRNGs.md#mulberry32",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

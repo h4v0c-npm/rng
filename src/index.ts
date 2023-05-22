@@ -41,9 +41,27 @@ export class RandomNumberGenerator {
         return (min + this.randomInt() % (max - min));
     }
 
-    choose(value: Array<any> | string): any {
-        const t: Array<any> = Array.isArray ? [...value] : (value as string).split('');
-        return t[this.randomInt() % value.length];
+    choose(values: any[] | string, weights?: number[]): any {
+        values = Array.isArray ? ([...values] as any[]) : ((values as string).split('') as string[]);
+
+        if (weights?.length === values.length) {
+            const cWeights = [];
+
+            for (let i = 0; i < weights.length; i++) {
+                cWeights[i] = weights[i] + (cWeights[i - 1] || 0);
+            }
+
+            const maxWeight: number = cWeights[cWeights.length - 1];
+            const n: number = maxWeight * randomFloat();
+
+            for (let i = 0; i < values.length; i++) {
+                if (cWeights[i] >= n) {
+                    return values[i];
+                }
+            }
+        } else {
+            return values[this.randomInt() % values.length];
+        }
     }
 
     shuffle(value: Array<any> | string): Array<any> | string {
